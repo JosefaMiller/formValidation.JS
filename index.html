@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Formulario HTML5</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <div class="p-3 mb-2 bg-light text-dark">
+                    <h3 class="card-title">Payment form example</h3>
+                </div>
+                <div class="form">
+
+                  <div class="alert alert-danger" role="alert" style="display: none;"><strong>Some field are missing</strong></div>
+
+                    <div class="row mx-1">
+                        <div class="col-5">
+                            <label for="numberCard" class="form-label">Card#</label>
+                            <input type="text" required minlength="16" maxlength="16" id="numberCard"
+                                class="form-control" placeholder="XXXXXXXXXXXXXXXX">
+
+                        </div>
+                        <div class="col-3">
+                            <label for="#cvc" class="form-label">CVC#</label>
+                            <input type="password" required minlength="4" maxlength="4" id="#cvc" class="form-control"
+                                placeholder="0000">
+                        </div>
+                        <div class="signopeso col-1">
+                            <label for="Amount">$</label>
+                        </div>
+                        <div class="col-3">
+                            <label for="Amount" class="amount form-label">Amount</label>
+                            <input type="text" id="Amount" required class="form-control" placeholder="Amount">
+
+                        </div>
+                    </div>
+
+                    <div class="row mx-1">
+                        <div class="col-6">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" id="firstName" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" id="lastName" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row mx-1">
+                        <div class="col-6">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" id="city" class="form-control">
+                        </div>
+                        <div class="col-3">
+                            <label for="disabledSelect" class="form-label">State</label>
+
+                            <select id="disabledSelect" class="form-select">
+                                <option>Pick a state</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="postalCode" class="form-label">Postal code</label>
+                            <input type="text" id="postalCode" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row mx-1">
+
+                        <div class="col-6 bg-white">
+                            <h5>We accept:</h5>
+
+                            <div class="payment p-3 mb-2 bg-secondary text-white">
+                                <input class="form-check-input" type="radio" name="payment" id="inlineRadio"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-mastercard fa-x2"></i></label>
+
+                                <input class="form-check-input" type="radio" name="payment" id="inlineRadio"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-visa fa-x2"></i></label>
+
+
+                                <input class="form-check-input" type="radio" name="payment" id="inlineRadio"
+                                    value="option3">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-diners-club fa-x2"></i></label>
+
+
+                                <input class="form-check-input" type="radio" name="payment" id="inlineRadio"
+                                    value="option 4">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-amex fa-x2"></i></label>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-6">
+
+                            <label for="inputMessage" class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" id="inputMessage"></textarea>
+                            <div id="messageHelpBlock" class="form-text">
+                                Add any notes here.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="buttons p-3  bg-light text-dark">
+                <button type="submit" class="send btn btn-primary">Send</button>
+                <button type="reset" class="cancel btn btn-secondary">Cancel</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
