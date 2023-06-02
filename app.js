@@ -11,7 +11,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
 
   var isValid = true;
 
-  // Validating the card number
+
   if (!/^\d+$/.test(numberCard)) {
       isValid = false;
       document.getElementById('numberCard').classList.add('is-invalid');
@@ -20,7 +20,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
       document.getElementById('numberCard').classList.remove('is-invalid');
   }
 
-  // Validating the CVC
+  
   if (!/^\d{4}$/.test(cvc)) {
       isValid = false;
       document.getElementById('#cvc').classList.add('is-invalid');
@@ -29,7 +29,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
       document.getElementById('#cvc').classList.remove('is-invalid');
   }
 
-  // Validating the amount
+ 
   if (isNaN(amount)) {
       isValid = false;
       document.getElementById('Amount').classList.add('is-invalid');
@@ -38,7 +38,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
       document.getElementById('Amount').classList.remove('is-invalid');
   }
 
-  // Validating the postal code
+
   if (!/^\d{6,8}$/.test(postalCode)) {
       isValid = false;
       document.getElementById('postalCode').classList.add('is-invalid');
@@ -47,7 +47,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
       document.getElementById('postalCode').classList.remove('is-invalid');
   }
 
-  // Validating the first name
+ 
   if (firstName.trim() === '') {
       isValid = false;
       document.getElementById('firstName').classList.add('is-invalid');
@@ -56,7 +56,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
       document.getElementById('firstName').classList.remove('is-invalid');
   }
 
-  // Validating the last name
+ 
   if (lastName.trim() === '') {
       isValid = false;
       document.getElementById('lastName').classList.add('is-invalid');
@@ -65,7 +65,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
       document.getElementById('lastName').classList.remove('is-invalid');
   }
 
-  // Validating the city
+ 
   if (city.trim() === '') {
       isValid = false;
       document.getElementById('city').classList.add('is-invalid');
@@ -74,7 +74,7 @@ document.querySelector('.send').addEventListener('click', function (event) {
       document.getElementById('city').classList.remove('is-invalid');
   }
 
-  // Validating the message length
+ 
   if (message.length > 100) {
       isValid = false;
       document.getElementById('inputMessage').classList.add('is-invalid');
@@ -84,8 +84,8 @@ document.querySelector('.send').addEventListener('click', function (event) {
   }
 
   if (isValid) {
-      // Here you can submit the form or perform any other action
-      // as the form is valid
+      
+
       alert('Formulario enviado con éxito!');
   }
 });
